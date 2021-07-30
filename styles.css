@@ -10,12 +10,16 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: "DM Serif Display", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .main {
   background-color: azure;
   height: 75vh;
 }
+
+/* font-family: 'DM Serif Display', serif; */
 
 .container {
   width: 70%;
@@ -34,15 +38,27 @@ body {
 .footer > .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  background-color: white;
 }
 
 .section {
   width: 25%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
   display: flex;
+  margin-top: 50px;
 }
 
 .section-icon > img {
   height: 40px;
+  margin-right: 20px;
+}
+
+.section-content > h3 {
+  color: rgb(30, 30, 30);
+  margin: 5px 0;
+}
+
+.section-content > p {
+  font-size: 15px;
+  color: rgb(110, 110, 110);
 }
