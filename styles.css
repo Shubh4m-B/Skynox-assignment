@@ -1,19 +1,15 @@
-* {
+body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  height: 100vh;
-  width: 100%;
   overflow-x: hidden;
   font-family: "DM Serif Display", serif;
   font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease-in-out;
 }
 
-main {
+.main {
   background-color: rgb(254, 252, 252);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   padding-top: 70px;
@@ -22,7 +18,6 @@ main {
 /* Carousel styles */
 .carousel {
   width: 50%;
-  /* background-color: brown; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,7 +27,6 @@ main {
 .carousel-slider {
   width: 100%;
   height: 500px;
-  /* background-color: blue; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -42,7 +36,6 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  /* background-color: blueviolet; */
   width: 95%;
   display: flex;
   justify-content: space-between;
@@ -74,7 +67,6 @@ main {
 .carousel-nav {
   width: 100%;
   height: 120px;
-  /* background-color: blueviolet; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +75,6 @@ main {
 .carousel-nav-item {
   height: 90px;
   width: 90px;
-  background-color: darkblue;
 }
 
 .carousel-nav-item > img {
@@ -105,7 +96,6 @@ main {
   justify-content: center;
   height: 100%;
   width: 50%;
-  /* background-color: bisque; */
   margin-left: 80px;
   color: rgb(110, 110, 110);
 }
@@ -146,6 +136,7 @@ main {
   background-color: rgb(30, 30, 30);
   color: white;
   border-color: rgb(30, 30, 30);
+  margin-right: 20px;
 }
 
 .dark:hover {
@@ -155,7 +146,6 @@ main {
 .light {
   background: none;
   border-color: rgb(30, 30, 30);
-  margin-left: 10px;
 }
 
 .light:hover {
@@ -165,27 +155,27 @@ main {
 
 .container {
   width: 70%;
-  /* background-color: aquamarine; */
   height: 100%;
 }
 
-footer {
-  height: 30vh;
+.footer {
+  margin-top: 30px;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
 }
 
-footer > .container {
+.footer > .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: white;
 }
 
 .section {
   width: 25%;
-  /* background-color: burlywood; */
   display: flex;
   margin-top: 50px;
 }
@@ -203,4 +193,37 @@ footer > .container {
 .section-content > p {
   font-size: 15px;
   color: rgb(110, 110, 110);
+}
+
+/* Media queries */
+@media only screen and (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel {
+    width: 120%;
+  }
+  .right-content {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    margin: 50px 0;
+  }
+  .dark,
+  .light {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer > .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
