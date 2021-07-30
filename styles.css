@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: aqua;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: azure;
+  height: 75vh;
+}
+
+.container {
+  width: 70%;
+  background-color: aquamarine;
+  height: 100%;
+}
+
+.footer {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.footer > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  width: 25%;
+  background-color: burlywood;
+  display: flex;
+}
+
+.section-icon > img {
+  height: 40px;
+}
